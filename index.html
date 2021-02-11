@@ -84,7 +84,7 @@
     </div>
 
     <div id="loadingImg" style="top:45%;width: 100%;position:absolute; ">
-        <img src="res/loading.gif" width="20%" height="20%" />
+        <img src="res/loading.gif" width="7%" height="7%" />
     </div>
 
 
@@ -106,11 +106,25 @@
         judgeLanTitle();
 
         function judgeLanTitle() {
+            alert("点击宝箱,切换迪莫。破坏游戏体验，谨慎尝试。")
+
             //        console.log("window.navigator.language",window.navigator.language);
 
             if (window.navigator.language == "zh-CN" || window.navigator.language == "zh-cn") {
-                document.title = "合成迪莫";
-            } 
+                document.title = "快速合成迪莫";
+            } else if (window.navigator.language == "zh-TW") {
+                document.title = "快速合成迪莫";
+            } else if (window.navigator.language == "zh-HK") {
+                document.title = "快速合成迪莫";
+            } else if (window.navigator.language == "ko-KR") {
+                document.title = "작은 놀이：큰 수박 을 합성 하 다";
+            } else if (window.navigator.language == "ja-JP") {
+                document.title = "ミニゲーム：合成deemo";
+            } else if (window.navigator.language == "th-TH") {
+                document.title = "เกมเล็กๆ：แตงโมสังเคราะห์";
+            } else {
+                document.title = "Little game：Synthetic watermelon";
+            }
 
 
         }
